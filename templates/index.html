@@ -3,19 +3,20 @@
 
 <head>
    <meta charset="UTF-8">
-   <title>テキスト送信</title>
+   <title>TalkFlow</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
-   <h1>会話を送信する</h1>
-   <form method="POST">
-      <input type="text" name="text" placeholder="ここに入力してください" required>
-      <button type="submit">送信</button>
+   <h1>TalkFlow</h1>
+   <form method="POST" class="form-container">
+      <textarea name="text" placeholder="ここに入力してください" required class="text-input" rows="8"></textarea>
+      <button type="submit" class="submit-button">送信</button>
    </form>
 
-   {% if received_text %}
-   <p>受信した文章：{{ received_text }}</p>
-   {% endif %}
+   <div style="margin-top:30px;">
+      <iframe src="{{ url_for('static', filename='graph.html') }}" width="100%" height="600px" frameborder="0"></iframe>
+   </div>
 </body>
 
 </html>
