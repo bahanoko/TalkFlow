@@ -6,7 +6,7 @@ class TopicGraph:
         self.G = nx.Graph()
         net = Network(height="600px", width="100%")
         net.from_nx(self.G)    
-        net.write_html("./static/graph.html")
+        net.write_html("./app/static/graph.html")
 
     def topics_to_graph(self, topics):
         for t in topics.topics:
@@ -17,7 +17,7 @@ class TopicGraph:
         self.visualize_graph_pyvis()
 
 
-    def visualize_graph_pyvis(self, output_html="./static/graph.html"):
+    def visualize_graph_pyvis(self, output_html="./app/static/graph.html"):
         net = Network(height="600px", width="100%")
         net.from_nx(self.G)    
         net.write_html(output_html)
