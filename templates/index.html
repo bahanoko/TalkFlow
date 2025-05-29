@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+   <meta charset="UTF-8">
+   <title>テキスト送信</title>
+</head>
+
+<body>
+   <h1>会話を送信する</h1>
+   <form method="POST">
+      <input type="text" name="text" placeholder="ここに入力してください" required>
+      <button type="submit">送信</button>
+   </form>
+
+   {% if received_text %}
+   <p>受信した文章：{{ received_text }}</p>
+   {% endif %}
+</body>
+
+</html>
