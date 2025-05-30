@@ -26,12 +26,31 @@ TalkFlow visualizes the "topics" within conversations or text as a graph network
 ---
 
 ## Tech Stack
-Next.js / React / TypeScript / Python / Flask / Docker / Gemini API
+- Next.js (React, TypeScript)
+- Python (Flask)
+- Docker
+- Gemini API
 
 ---
 
 ## Getting Started
 
-```shell
-still preparing ...
-```
+1. **Set up your API key:**  
+   Create a file named `.env` in the `app/` directory and add your Gemini API key:
+   ```env
+   GENAI_API_KEY=your_api_key_here
+   ```
+
+2. **Build and start the app:**
+   ```shell
+   docker compose up --build
+   ```
+
+3. **Access the app:**
+   Open http://localhost:3000 in your browser.
+---
+
+## Features
+- Real-time topic graph visualization
+- AI-powered topic extraction (Gemini API)
+- Voice input planned for future support
