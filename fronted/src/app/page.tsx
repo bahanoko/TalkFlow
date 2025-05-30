@@ -17,7 +17,6 @@ export default function Page() {
   useEffect(() => {
     const socket = io("http://localhost:5000");
     socket.on("update", (msg) => {
-      // 前回と異なる場合のみ更新
       if (!isEqual(prevDataRef.current, msg)) {
         setData(msg);
         prevDataRef.current = msg;

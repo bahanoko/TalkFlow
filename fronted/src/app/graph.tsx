@@ -19,7 +19,6 @@ export default function GraphView({ data }: { data: GraphData }) {
    const [size, setSize] = useState({ width: 700, height: 600 });
    const fgRef = useRef<any>(null);
 
-   // ウィンドウリサイズ時にサイズを再取得
    useEffect(() => {
       function handleResize() {
          if (containerRef.current) {
@@ -34,10 +33,10 @@ export default function GraphView({ data }: { data: GraphData }) {
       return () => window.removeEventListener('resize', handleResize);
    }, []);
 
-   // ノード間距離を調整
+
    useEffect(() => {
       if (fgRef.current) {
-         fgRef.current.d3Force('link')?.distance(180); // ←ここで距離(px)を指定
+         fgRef.current.d3Force('link')?.distance(180); // Node間距離
       }
    }, [data]);
 
