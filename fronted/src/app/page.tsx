@@ -11,6 +11,7 @@ export default function Page() {
   const [text, setText] = useState("");
   const [response, setResponse] = useState("");
   const [data, setData] = useState<any>(null);
+  const [latestNodeId, setLatestNodeId] = useState<string | null>(null);
 
   const prevDataRef = useRef<any>(null);
 
@@ -27,6 +28,12 @@ export default function Page() {
     };
   }, []);
 
+  useEffect(() => {
+    if (data && data.nodes && data.nodes.length > 0) {
+      setLatestNodeId(data.nodes[data.nodes.length - 1].id);
+    }
+  }, [data]);
+
   async function sendText() {
     try {
       const res = await fetch("http://localhost:5000/send", {
@@ -36,6 +43,7 @@ export default function Page() {
       });
       const data = await res.json();
       setResponse(JSON.stringify(data, null, 2));
+      setText("");
     } catch (error: any) {
       setResponse("送信エラー: " + error.message);
     }
@@ -64,7 +72,7 @@ export default function Page() {
           </button>
         </div>
       </div>
-      <GraphView data={data ?? EMPTY_GRAPH} />
+      <GraphView data={data ?? EMPTY_GRAPH} latestNodeId={latestNodeId} />
     </main>
   );
 }

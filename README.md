@@ -1,9 +1,5 @@
 # TalkFlow
 
-※ Still under development, so it might not work perfectly yet.
-
----
-
 ## Overview
 
 TalkFlow visualizes the "topics" within conversations or text as a graph network, making the flow of discussion instantly clear.
@@ -23,19 +19,20 @@ TalkFlow visualizes the "topics" within conversations or text as a graph network
 
 ![Graph Example](graph.png)
 - Submitting multiple messages will generate and update the graph.
-- The example shown is based on the fairy tale *The Restaurant of Many Orders*.
-- The upper section of the graph clearly shows the story flow:
-  - Two young gentlemen follow various "etiquette" steps like washing their shoes and hair.
-  - They gradually remove their gear, including their guns and clothing.
+- The example shown is based on [DemoTalk](DemoTalk.md).
+- The graph reveals that the conversation developed starting from the topic "game."
+- The most recently added nodes are displayed in red.
 
 ---
 
 ## Tech Stack
 
-- Python  
+- Next.js
+  - React
+  - TypeScript
+- Python
+  - Flask
 - Docker  
-- AWS  
-  - (Amazon Transcribe)  
 - Gemini API
 
 ---
@@ -43,8 +40,5 @@ TalkFlow visualizes the "topics" within conversations or text as a graph network
 ## Getting Started
 
 ```shell
-pip install -r requirements.txt
-```
-```shell
-flask --app app run
+still preparing ...
 ```
