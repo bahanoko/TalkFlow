@@ -31,6 +31,8 @@ class GeminiAI:
         topics: List[str] = response.parsed
         if topics:
             self.logger.log_topics(topics)
+            if self.logger.is_ready():
+                self.inference_graph(self.logger.get_log())
 
     def inference_graph(self, topics: list[list[str]]):
         prompt = (
