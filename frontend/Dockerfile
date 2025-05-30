@@ -1,6 +1,6 @@
 FROM node:20-alpine AS builder
 
-WORKDIR /app
+WORKDIR /frontend
 
 COPY package.json package-lock.json* pnpm-lock.yaml* yarn.lock* ./
 RUN \
@@ -13,12 +13,11 @@ COPY . .
 
 RUN npm run build
 
-# 2. 実行用イメージ
 FROM node:20-alpine
 
-WORKDIR /app
+WORKDIR /frontend
 
-COPY --from=builder /app ./
+COPY --from=builder /frontend ./
 
 ENV NODE_ENV=production
 EXPOSE 3000

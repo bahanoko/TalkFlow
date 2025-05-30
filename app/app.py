@@ -4,8 +4,6 @@ from flask_cors import CORS
 from gemini import GeminiAI
 from logger import TopicLogger
 from graph import TopicGraph
-import threading
-import time
 
 app = Flask(__name__)
 CORS(app)
