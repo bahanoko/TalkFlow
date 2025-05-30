@@ -26,14 +26,7 @@ TalkFlow visualizes the "topics" within conversations or text as a graph network
 ---
 
 ## Tech Stack
-
-- Next.js
-  - React
-  - TypeScript
-- Python
-  - Flask
-- Docker  
-- Gemini API
+Next.js / React / TypeScript / Python / Flask / Docker / Gemini API
 
 ---
 
