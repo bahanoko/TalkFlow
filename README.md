@@ -9,8 +9,6 @@ TalkFlow visualizes the "topics" within conversations or text as a graph network
 - Meetings where topics keep shifting — use TalkFlow to organize and track discussions.
 - Reading a novel but forgot what happened earlier — use TalkFlow to recall previous topics.
 
----
-
 ## Example
 
 ![Textbox Example](textbox.png)
@@ -23,15 +21,12 @@ TalkFlow visualizes the "topics" within conversations or text as a graph network
 - The graph reveals that the conversation developed starting from the topic "game."
 - The most recently added nodes are displayed in red.
 
----
-
 ## Tech Stack
+
 - Next.js (React, TypeScript)
 - Python (Flask)
 - Docker
 - Gemini API
-
----
 
 ## Getting Started
 
@@ -46,11 +41,11 @@ TalkFlow visualizes the "topics" within conversations or text as a graph network
    docker compose up --build
    ```
 
-3. **Access the app:**
+3. **Access the app:**  
    Open http://localhost:3000 in your browser.
----
 
 ## Features
+
 - Real-time topic graph visualization
 - AI-powered topic extraction (Gemini API)
 - Voice input planned for future support
