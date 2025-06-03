@@ -11,15 +11,17 @@ TalkFlow visualizes the "topics" within conversations or text as a graph network
 
 ## Example
 
-![Textbox Example](textbox.png)
+![Textbox Example](./images/textbox.png)
 - You can input conversation text via the textbox and submit it.
 - Voice input is planned for future support.
 
-![Graph Example](graph.png)
+![Graph Example](./images/graph.png)
 - Submitting multiple messages will generate and update the graph.
 - The example shown is based on [DemoTalk](DemoTalk.md).
 - The graph reveals that the conversation developed starting from the topic "game."
 - The most recently added nodes are displayed in red.
+
+![Demo Video](./images/youtube.png)(https://youtu.be/EIENG8IBCYY?si=RSVGAbZTRdKKMcAP)
 
 ## Tech Stack
 
